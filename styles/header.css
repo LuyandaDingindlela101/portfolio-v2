@@ -1,0 +1,108 @@
+.header {
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	display: flex;
+	padding: 1% 10%;
+	position: fixed;
+	align-items: center;
+	justify-content: space-between;
+    backdrop-filter: blur(5px);
+}
+
+/* LOGO */
+.header .logo {
+	height: 50px;
+}
+
+/* NAV CONTAINER */
+.header .nav-container .nav-list {    
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .nav-container .nav-list .nav-item .nav-link {    
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.header .nav-container .nav-list .nav-item .nav-link.active {    
+    color: var(--primary-color);
+}
+
+.header .nav-container .nav-list .nav-item:nth-child(2n) .nav-link {    
+    color: rgba(255, 255, 255, 0.10);
+}
+
+/* MENU BUTTON */
+.header .menu-btn-container {
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	display: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.header .menu-btn-container .menu-btn {
+	width: 30px;
+	height: 3px;
+	position: relative;
+	background: var(--primary-color);
+	transition: all 1s ease-in-out;
+}
+
+.header .menu-btn-container .menu-btn::before {
+	right: 0;
+	top: -10px;
+	width: 50px;
+	height: 3px;
+	content: '';
+	position: absolute;
+	background: var(--primary-color);
+	transition: all 1s ease-in-out;
+}
+
+.header .menu-btn-container .menu-btn::after {
+	right: 0;
+	width: 40px;
+	height: 3px;
+	content: '';
+	bottom: -10px;
+	position: absolute;
+	background: var(--primary-color);
+	transition: all 1s ease-in-out;
+}
+
+.header .menu-btn-container:hover .menu-btn {
+	width: 50px;
+}
+
+.header .menu-btn-container:hover .menu-btn::after {
+	width: 50px;
+}
+
+/* NAV BUTTON CONTAINER ACTIVE */
+.header .menu-btn-container.active .menu-btn {
+	background: #ecf0f1;
+	background: transparent;
+}
+
+.header .menu-btn-container.active .menu-btn::before {
+	top: 0;
+	bottom: 0;
+	background: #ecf0f1;
+	transform: rotate(45deg);
+}
+
+.header .menu-btn-container.active .menu-btn::after {
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	background: #ecf0f1;
+	transform: rotate(315deg);
+}
