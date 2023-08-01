@@ -1,0 +1,51 @@
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section .contact-container {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-section .contact-container .content, 
+.contact-section .contact-container .contact-form {
+    width: 50%;
+}
+
+.contact-section .contact-container .contact-form .row {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-section .contact-container .contact-form input::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-section .contact-container .contact-form input, 
+.contact-section .contact-container .contact-form textarea {
+    width: 100%;
+    resize: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: transparent;
+    color: var(--color-white);
+    transition: all .5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--secondary-bg-color);
+}
+
+.contact-section .contact-container .contact-form input:focus, 
+.contact-section .contact-container .contact-form textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+.contact-section .contact-container .contact-form textarea {
+    height: 150px;    
+}

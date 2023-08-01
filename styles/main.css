@@ -19,8 +19,13 @@ body {
     color: var(--color-white);
     transition: all .5s ease-in-out;
     font-family: 'Poppins', sans-serif;
+    background: var(--primary-bg-color);
+}
+
+section:nth-child(2n) {
     background: var(--secondary-bg-color);
 }
+
 section > img:first-of-type {
     top: 0;
     width: 60%;

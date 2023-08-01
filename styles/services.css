@@ -1,8 +1,41 @@
 .services-section {
     padding: 50px 0;
-    background: var(--primary-bg-color);
+    /* background: var(--primary-bg-color); */
 }
 
-.services-section .services-container{
+.services-section .services-container {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
 }
 
+.services-section .services-container .service:first-of-type {
+    min-height: 200px;
+    width: calc((100% / 3));
+}
+
+.services-section .services-container .service:first-of-type h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.services-section .services-container .service:not(:first-of-type) {
+    padding: 15px;
+    cursor: pointer;
+    min-height: 250px;
+    border-radius: 5px;
+    width: calc((100% / 3));
+    transition: all .5s ease-in-out;
+    border: 2px solid var(--secondary-bg-color);
+}
+
+.services-section .services-container .service:not(:first-of-type):hover {
+    background: var(--secondary-bg-color);
+    transform: translateY(-10px);
+}
+
+.services-section .services-container .service:not(:first-of-type) h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}

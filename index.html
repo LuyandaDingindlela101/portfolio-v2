@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="./styles/projects.css">
         <link rel="stylesheet" href="./styles/skills.css">
         <link rel="stylesheet" href="./styles/services.css">
+        <link rel="stylesheet" href="./styles/contact.css">
 
         <link rel="shortcut icon" href="./assets/images/logo_white.png" type="image/x-icon" class="favicon">
     </head>
@@ -194,13 +195,48 @@
         <section id="services-section" class="services-section">
             <div class="services-container container">
                 <div class="service">
-                    <div class="content">
-                        <h2>What i can help with</h2>
-                        <p>
-                            I aim to help start-ups and small businesses by building their online brand so their business can thrive.
-                        </p>
+                    <h2>What i can help with</h2>
+                    <p>
+                        I aim to help start-ups and small businesses by building their online brand so their business can thrive.
+                    </p>
+                </div>
+                <div class="service">
+                    <span>01</span>
+                    <h3>Web Design</h3>
+                    <p>
+                        I aim to help start-ups and small businesses by building their online brand so their business can thrive.
+                    </p>
+                </div>
+                <div class="service">
+                    <span>02</span>
+                    <h3>Web Developement</h3>
+                    <p>
+                        I aim to help start-ups and small businesses by building their online brand so their business can thrive.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact-section" class="contact-section">
+            <div class="contact-container container">
+                <div class="content">
+                    <h2>Have any questions? Lets talk.</h2>
+                    <p>
+                        I'm interested in the entire full-stack spectrum and working on ambitious projects with positive people. I hope to collaborate and make some magic with you soon.
+                    </p>
+                    <div class="socials-list">
+
                     </div>
                 </div>
+                <form class="contact-form" netlify>
+                    <div class="row">
+                        <input class="contact-input" type="text" name="full_name" id="full_name" placeholder="Full Name" required="">
+                        <input class="contact-input" type="email" name="email" id="email" placeholder="Email Address" required="">
+                    </div>
+                    <textarea class="contact-input" name="message" id="message" placeholder="Type your message here"></textarea>
+                    <button name="submit form button" class="primary-btn btn" type="submit">Send message</button>
+                </form>
             </div>
         </section>
         <script src="./scripts/index.js"></script>
