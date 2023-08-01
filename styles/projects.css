@@ -3,8 +3,98 @@
 }
 
 .projects-section .projects-container {
+    height: 500px;
     display: flex;
+    max-width: 100vw;
+    overflow: hidden;
     align-items: center;
     justify-content: flex-start;
 }
 
+.projects-section .projects-container .project {
+    width: 10%;
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all .5s ease-in-out;
+}
+
+.projects-section .projects-container .project::before {
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+
+}
+
+.projects-section .projects-container .project.active {
+    width: 70%;
+    padding: 50px;
+    height: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.projects-section .projects-container .project.active::before {
+    filter: grayscale(0);
+}
+
+.projects-section .projects-container .project:nth-child(1)::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/k-electrical.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects-section .projects-container .project:nth-child(2)::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/dzuvha-botique-villa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects-section .projects-container .project:nth-child(3)::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/k-electrical.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects-section .projects-container .project:nth-child(4)::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/dzuvha-botique-villa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects-section .projects-container .project .project-description {
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 350px;
+    pointer-events: none;
+}
+
+.projects-section .projects-container .project.active .project-description {
+    opacity: 1;
+    width: 100%;
+    max-width: 500px;
+}
+
+.projects-section .projects-container .project .project-description h2  {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.projects-section .projects-container .project .project-description p {
+    margin-bottom: 20px;
+}
+
+.projects-section .projects-container .project .project-description a {
+    pointer-events: all;
+}
