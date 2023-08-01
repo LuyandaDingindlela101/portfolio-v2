@@ -1,0 +1,34 @@
+.skills-section {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.skills-section .skills-container {
+    gap: 25px;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+}
+
+.skills-section .skills-container .skills-list {
+    gap: 25px;
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-around;
+    animation: scroll 50s linear infinite;
+}
+
+.skills-section .skills-container .skills-list li h2 {
+    font-size: 30px;
+}
+
+.skills-section .skills-container .skills-list li h2.separator {
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.10);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 25px)); }
+}
